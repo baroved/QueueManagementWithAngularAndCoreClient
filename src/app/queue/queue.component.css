@@ -1,0 +1,57 @@
+.mainDiv {
+    border: solid 1px black;
+    overflow: hidden;
+    padding: 5px;
+    max-width: 370px;
+}
+
+.title {
+    text-align: right;
+}
+
+.BorderElements {
+    border: solid 2px black;
+    display: inline-block;
+    padding: 5px;
+
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table,
+td {
+    border: solid 3px black;
+    padding: 5px;
+}
+
+table tr:first-child td {
+    color: red;
+}
+
+body {
+    background-color: aqua;
+}
+
+@media screen and (max-width: 350px) {
+
+    table tr td:first-child {
+        display: none;
+        ;
+    }
+
+    .btnCallNext {
+        float: right;
+    }
+
+    .btnToEnqueue {
+        display: block;
+        text-align: center;
+        width: 80%;
+    }
+
+    .nameDiv {
+        width: 80%;
+    }
+}

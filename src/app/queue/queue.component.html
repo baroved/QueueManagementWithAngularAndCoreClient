@@ -1,0 +1,62 @@
+<div class="mainDiv">
+  <div class="title">ENQUEUE</div>
+</div>
+
+<div class="mainDiv">
+
+  <div class="BorderElements nameDiv">
+    <input #name class="nameDiv" id="nameText" type="text" placeholder="Enter Name" />
+
+  </div>
+  <div class="BorderElements btnToEnqueue">
+    <input type="button" value="Enqueue" (click)="ToQueue(name.value)" />
+  </div>
+
+</div>
+
+<div class="mainDiv">
+  <div class="title">QUEUE</div>
+</div>
+
+<div class="mainDiv">
+  <table class="listOfClients">
+    <tr>
+      <td>Enqueued At</td>
+      <td>Name</td>
+      <td>Queue Num</td>
+    </tr>
+    <tr *ngFor="let user of Users">
+      <td> {{user.currentTime}}</td>
+      <td> {{user.name}}</td>
+      <td>{{user.queueNum}}</td>
+    </tr>
+
+  </table>
+</div>
+
+<div class="mainDiv">
+  <div class="title">CURRENT</div>
+</div>
+
+<div class="mainDiv">
+  <div>
+    <table class="CurrentClient">
+      <tr>
+        <td>Entered At</td>
+        <td>Name</td>
+        <td>Queue Num</td>
+      </tr>
+      <tr>
+        <td>{{CurrentUser.currentTime}}</td>
+        <td>{{CurrentUser.name}}</td>
+        <td>{{CurrentUser.queueNum}}</td>
+      </tr>
+    </table>
+    <div class="BorderElements btnCallNext">
+      <input type="button" value="Call Next" (click)="CallNext()" />
+
+    </div>
+  </div>
+
+
+</div>
